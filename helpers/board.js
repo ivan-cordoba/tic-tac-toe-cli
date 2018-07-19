@@ -38,15 +38,14 @@ const boardToString = () => {
 }
 
 const placePiece = (row, col, player) => {
-  console.log(row, col);
   board[row][col] = player;
 }
 
-const checkRows = (player) => {
+const checkRows = (player, boardIn = board) => {
   for (let i = 0; i < 3; i += 1) {
     let check = true;
     for (let j = 0; j < 3; j += 1) {
-      if (board[i][j] !== player) {
+      if (boardIn[i][j] !== player) {
         check = false;
       }
     }
@@ -57,11 +56,11 @@ const checkRows = (player) => {
   return false;
 };
 
-const checkCols = (player) => {
+const checkCols = (player, boardIn = board) => {
   for (let i = 0; i < 3; i += 1) {
     let check = true;
     for (let j = 0; j < 3; j += 1) {
-      if (board[j][i] !== player) {
+      if (boardIn[j][i] !== player) {
         check = false;
       }
     }
@@ -72,20 +71,20 @@ const checkCols = (player) => {
   return false;
 }
 
-const checkDias = (player) => {
-  if (board[0][0] === player && board[1][1] === player && board[2][2] === player) {
+const checkDias = (player, boardIn = board) => {
+  if (boardIn[0][0] === player && boardIn[1][1] === player && boardIn[2][2] === player) {
     return true;
   }
-  if (board[0][2] === player && board[1][1] === player && board[2][0] === player) {
+  if (boardIn[0][2] === player && boardIn[1][1] === player && boardIn[2][0] === player) {
     return true;
   }
   return false;
 }
 
-const checkWin = (player) => {
-  if (checkRows(player)) return true;
-  if (checkCols(player)) return true;
-  if (checkDias(player)) return true;
+const checkWin = (player, boardIn = board) => {
+  if (checkRows(player, boardIn)) return true;
+  if (checkCols(player, boardIn)) return true;
+  if (checkDias(player, boardIn)) return true;
   return false;
 };
 
@@ -93,4 +92,7 @@ module.exports = {
   boardToString,
   placePiece,
   checkWin,
+  checkRows,
+  checkCols,
+  checkDias,
 }

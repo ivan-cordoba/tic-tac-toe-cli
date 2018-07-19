@@ -26,8 +26,8 @@ const askForCol = (player) => {
       col = parseInt(answer);
       placePiece(row, col, player);
       console.log(boardToString());
-      if (checkWin()) {
-        console.log('game over');
+      if (checkWin(player)) {
+        console.log(`Player ${player} WINS!`);
         rl.close();
         return;
       }

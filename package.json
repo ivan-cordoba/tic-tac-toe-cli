@@ -4,7 +4,7 @@
   "description": "Tic Tac Toe game with CLI",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ivan-cordoba/tic-tac-toe-cli/issues"
   },
-  "homepage": "https://github.com/ivan-cordoba/tic-tac-toe-cli#readme"
+  "homepage": "https://github.com/ivan-cordoba/tic-tac-toe-cli#readme",
+  "dependencies": {
+    "jest": "^23.4.1"
+  }
 }
