@@ -1,0 +1,19 @@
+{
+  "name": "tic-tac-toe-cli",
+  "version": "1.0.0",
+  "description": "Tic Tac Toe game with CLI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ivan-cordoba@github.com/ivan-cordoba/tic-tac-toe-cli.git"
+  },
+  "author": "Ivan Cordoba",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivan-cordoba/tic-tac-toe-cli/issues"
+  },
+  "homepage": "https://github.com/ivan-cordoba/tic-tac-toe-cli#readme"
+}
