@@ -2,8 +2,8 @@
 Tic Tac Toe game with CLI
 
 ## Installation
-sh`
+Run the following in the root directory to start the game:
+```sh
   npm install
   npm start
-`
-`
+```
